@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /**
+     计算三角形面积
+     */
+    function calArea(width, height) {
+        return width * height / 2;
+    }
+
+    //三角形的宽度
+    var w = window.prompt("输入三角形的宽！", "");
+    //三角形的高度
+    var h = window.prompt("输入三角形的高！", "");
+    document.write(calArea(w, h));
+
+</script>
+
+<div id="div_btn" style="text-align:center; font-size:16px;">
+    <input type="button" οnclick="calTriangle()" value="计算"/>
+</div>
+</body>
+</html>

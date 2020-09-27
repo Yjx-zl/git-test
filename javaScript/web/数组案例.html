@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--据学生的考试成绩，计算最高分、最低分、平均分和标准差。-->
+<!--Var classCount = 30;-->
+<!--Var classScore =
+[82,56,87,96,85,74,23,56,59,85,78,78,74,29,98,100,46,42,85,69]-->
+
+<script type="text/javascript">
+
+    //把成绩存储到一个数组里面
+    var a = [82,56,87,96,85,74,23,56,59,85,78,
+        78,74,29,98,100,46,42,85,69];
+    var sum = 0; //记录成绩和
+    var len = a.length; //数组长度
+    var aver = 0; //平均分
+    var number = 0; //标准差
+
+    averageScore(a);
+    document.write("<br>");
+
+    max(a);
+    document.write("<br>");
+
+    min(a);
+    document.write("<br>");
+
+    std(a);
+
+    //求平均分
+    function averageScore(arr) {
+        for (var i=0;i<arr.length;i++) {
+            sum += arr[i];
+        }
+        aver = sum / len;
+        document.write("平均分：" + aver);
+    }
+
+
+    //求标准差
+    function std(stdArr) {
+        var diff = 0;
+        for (var a=0;a<stdArr.length;a++) {
+            diff += (stdArr[a]-aver)*(stdArr[a]-aver);
+        }
+        number = Math.sqrt(diff);
+        number /= stdArr.length;//标准差
+        document.write("标准差：" + number)
+    }
+
+    //求最高分
+    function max(maxArr) {
+        document.write("最高分：" + Math.max.apply(null,maxArr));
+    }
+
+    //求最低分
+    function min(minArr) {
+        document.write("最低分：" + Math.min.apply(null,minArr));
+    }
+
+</script>
+</body>
+</html>

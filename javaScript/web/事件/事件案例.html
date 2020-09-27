@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="button1" onclick="c()">点击获取数据</button>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<script type="text/javascript">
+    var classScore = [82,56,87,96,85,74,23,56,59,85,78,
+        78,74,29,98,100,46,42,85,69];
+    var big = classScore.sort(function (m,n) {
+        return m-n;
+    }); //数组排序
+    // alert(big[0]); //最小值
+    // alert(big[big.length - 1]);//最大值
+
+    var sum = classScore.reduce(Arr);
+
+    function Arr(m,n) {
+        return m+n;
+    } //求数组的总和
+
+    var avg = sum / classScore.length; //求数组的平均数
+    // alert(avg);
+
+    function c() {
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        p1.innerHTML = "最大值：" + big[big.length - 1];
+        p2.innerHTML = "最小值：" + big[0];
+        p3.innerHTML = "平均数：" + avg;
+    }
+</script>
+
+
+</body>
+</html>

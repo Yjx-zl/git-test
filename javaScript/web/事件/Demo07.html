@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #img1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+<img id="img1" src="/img/timg.jpg" alt=""/>
+
+</body>
+<script type="text/javascript">
+    var top1 = 0;
+    var left = 0;
+
+    function move(e) {
+        switch (e.keyCode) {
+            case 37:
+                left -= 5;
+                break;
+            case 38:
+                top1 -= 5;
+                break;
+            case 39:
+                left += 5;
+                break;
+            case 40:
+                top1 += 5;
+                break;
+        }
+
+        var img1 = document.getElementById("img1");
+        img1.style.top=top1 + "px";
+        img1.style.left=left+"px";
+    }
+</script>
+</html>

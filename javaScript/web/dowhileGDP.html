@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var cn = 49089.82;
+    var usa = 142562.75;
+    var year = 2009;
+    do {
+        cn = cn + cn * 0.08;
+        usa = usa + usa * 0.02;
+
+        year ++;
+    } while (cn<usa);
+       document.write(year + "年超过美国");
+</script>
+</body>
+</html>

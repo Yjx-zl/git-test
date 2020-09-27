@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除留言板案例</title>
+    <style>
+        * {
+            margin:
+                    0;
+            padding:
+                    0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #45bcf9;
+        }
+
+        .del {
+            float: right;
+        }
+
+        ul,
+        li {
+            list-style:
+                    none;
+        }
+
+        .wrap {
+            width:
+                    400px;
+            margin:
+                    100px auto;
+        }
+
+        li {
+            padding:
+                    5px;
+            border-bottom:
+                    1px solid #eeeeee;
+            margin: 5px 0;
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        button {
+            background:
+                    #169fe6;
+            border:
+                    none;
+            color:
+                    #ffffff;
+            padding:
+                    5px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background:
+                    #45bcf9;
+        }
+
+        textarea {
+            width:
+                    100%;
+            padding:
+                    10px;
+            box-sizing:
+                    border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="wrap">
+    <div> <textarea name="" id="" cols="30" rows="10"></textarea> </div>
+    <div> <button>评论</button></div>
+    <ul></ul>
+</div>
+
+
+
+
+
+<script>
+    var text = document.querySelector('textarea');
+    var btn = document.querySelector('button');
+    var ul = document.querySelector('ul');
+
+    // 注册事件
+    btn.onclick = function () {
+        // 判断用户是否输入值
+        if (text.value == '') {
+            alert('请输入评论内容！');
+            return false;
+        } else {
+            // 1、创建节点
+            var li = document.createElement('li');
+            // 2、将用户输入的值赋添加到li元素中去，使用 innerHTML，再添加一个删除按钮
+            li.innerHTML = text.value + '<a href = "javascript:;" class = "del">删除</a>';
+            // 3、添加节点
+            ul.insertBefore(li, ul.children[0]);
+            text.value = '';
+
+            // 删除操作  node.removeChild(child)
+            var a = document.querySelectorAll('a');
+            for (var i = 0; i < a.length; i++) {
+                a[i].onclick = function () {
+                    // 删除当前a所在的li元素
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        }
+    }
+</script>
+</body>
+
+</html>

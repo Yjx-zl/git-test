@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input type="button" value="取cookie" onclick="fun()">
+</body>
+
+
+<script type="text/javascript">
+    document.cookie = "username=yjx";
+    document.cookie = "passwd=123";
+    document.cookie = "phone=15770935707";
+
+    function fun() {
+        var data = document.cookie;
+        var result = [];
+        result = data.split(";");
+        var userIdData = result[0].split("=")[1];
+        var pwdData = result[1].split("=")[1];
+        var phoneData = result[2].split("=")[1];
+
+        document.write("用户名为：" + userIdData + "<br>");
+        document.write("密码为：" + pwdData + "<br>");
+        document.write("电话号码为：" + phoneData + "<br>");
+    }
+
+    //清除cookie
+    function fun1() {
+        var date = new Date(); //新建日期变量
+        date.setDate(date.getDate()-7); //取得上一周日起
+        var cookieTest = "passwd=;expires"+date; //更改有效期
+        document.cookie = cookieText; //写入A
+    }
+
+</script>
+</html>

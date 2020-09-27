@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- <script type="text/javascript">
+     var num = prompt("请输入一个0到100的成绩");
+     if (num > 0 && num <= 100) {
+         if (num >= 90) {
+             alert("666，真厉害");
+         } else if(num >= 80 && num < 90) {
+             alert("还不错了");
+         } else if(num >= 70 && num < 80) {
+             alert("还有很大的进步空间")
+         } else if (num >= 60 && num < 70) {
+             alert("要小心，马上就快挂了")
+         } else {
+             alert("孩子多半是废了")
+         }
+     } else {
+         alert("请输出一个正确的成绩！");
+     }
+ </script>-->
+
+<script type="text/javascript">
+    var num = prompt("请输入一个0到100的成绩");
+    // num = num / 10;
+    switch (true) {
+        case num >= 90 && num <= 100:
+            alert("666,真厉害");
+            break;
+        case num >= 80 && num < 90:
+            alert("还不错了");
+            break;
+        case num >= 70 && num < 80:
+            alert("还要很大的进步空间");
+            break;
+        case num >= 60 && num < 70:
+            alert("要小心，马上就快挂了");
+            break;
+        case num >= 0 && num < 60:
+            alert("孩子多半是废了1");
+            break;
+        default:
+            alert("请输入合法的成绩1");
+    }
+</script>
+</body>
+</html>

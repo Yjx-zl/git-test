@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        /*div {*/
+            /*width: 300px;*/
+            /*height: 200px;*/
+            /*border: 1px solid red;*/
+        /*}*/
+
+        p {
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <!--<div class="cr" id="div1"></div>-->
+    <p class="p1" id="p1">万丈光芒！！！</p>
+</body>
+
+<script type="text/javascript">
+    // var color1 = document.getElementById("div1");
+
+    var color1 = document.getElementById("p1");
+    function fun() {
+        // color1.style.backgroundColor = "blue";
+        color1.style.color = "blue";
+    }
+    function fun1() {
+        // color1.style.backgroundColor = "red";
+        color1.style.color = "red";
+    }
+    function fun2() {
+        // color1.style.backgroundColor = "green";
+        color1.style.color = "green";
+    }
+
+    setInterval("fun()",100);
+    setInterval("fun1()",200);
+    setInterval(fun2,300);
+</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="what" onkeypress="search(event)">
+</body>
+
+<script type="text/javascript">
+    function  search(e) {
+        if (e.keyCode == 13) {
+            var what = document.getElementById("what");
+            alert("开始搜索：" + what.value)
+        }
+    }
+</script>
+</html>

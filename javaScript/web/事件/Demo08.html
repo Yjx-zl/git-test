@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">
+            捕获与冒泡的演示
+        </p>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var div1 = document.getElementById("div1");
+    var p1 = document.getElementById("p1");
+
+    div1.addEventListener("click",click1);
+    p1.addEventListener("click",click2);
+
+    function click1() {
+        alert("div被单击了");
+    }
+    function click2() {
+        alert("p被单击了");
+    }
+</script>
+</html>

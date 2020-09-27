@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1" onclick="danji()" ondblclick="shuangji()"></div>
+<div id="div2"></div>
+</body>
+<script type="text/javascript">
+    function danji() {
+        var div = document.getElementById("div1");
+        div.style.width = "200px";
+        div.style.height = "200px";
+        div.style.backgroundColor = "red";
+    }
+
+
+    function shuangji() {
+        var div = document.getElementById("div1");
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.backgroundColor = "blue";
+    }
+</script>
+</html>

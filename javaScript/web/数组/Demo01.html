@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+      var a=[];
+      var sum=0;
+      var sum1 = 0;
+      var sum0 = 0;
+      for (var i=0;i<5;i++){
+          a[i]=Number(prompt("请输入分数"));
+          sum += a[i];
+      }
+      var ave = sum / a.length;
+      for (j=0;j<5;j++) {
+          sum0 = sum0+((ave -a[j])*(ave-a[j]));
+      }
+      sum1 = sum0 / 5;
+      alert(Math.sqrt(sum1));
+
+
+    </script>
+</body>
+</html>

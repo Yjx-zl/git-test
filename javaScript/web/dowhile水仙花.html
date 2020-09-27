@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var i = 100;
+    do {
+        var a=i%10;
+        var b=parseInt(i/10) % 10;
+        var c=parseInt(i/100);
+        if(i==a*a*a+b*b*b+c*c*c){ //判断i是否为水仙花数
+            document.write("100-999以内的水仙花数为: " + i + "<br>");
+        }
+        i++;
+    } while (i <= 999);
+
+</script>
+
+</body>
+</html>

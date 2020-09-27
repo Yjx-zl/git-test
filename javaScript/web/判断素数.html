@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    // 判断是否为素数
+    var num = window.prompt("请输入一个数：");
+    var flag = true;
+    for (var i=2;i<num;i++) {
+        if(num % i === 0) {
+            flag = false;
+        }
+    }
+    if (flag) {
+        document.write("是素数");
+    } else {
+        document.write("不是素数");
+    }
+</script>
+
+</body>
+</html>

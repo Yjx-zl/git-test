@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+    // 二、输出1000以内的完数
+    for (var i=1;i<1000;i++) {
+        var sum = 0;//记录一个数的因子的和
+        for (var j = 1;j<i;j++) { //找这个数的因子
+            if (i % j == 0) {
+                sum += j;
+            }
+        }
+        //如果这个数等于他的因子之和，就打印输出
+        if (i == sum) {
+            document.write(i + "<br>");
+        }
+    }
+
+</script>
+
+</body>
+</html>

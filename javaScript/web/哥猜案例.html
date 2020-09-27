@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+  /*  function prime(num) {
+        var flag = true;
+        for (var i=2;i<num;i++) {
+            if (num % i == 0) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            document.write("是素数");
+        } else {
+            document.write("不是素数");
+        }
+    }
+
+    prime(1000000);*/
+
+  // 输入任意一个大于2的偶数并返回结果;
+  var num = parseInt(prompt("输入一个偶数"));
+  isTrue(num);
+
+
+
+  // 判断一个数是否是质数
+  function factorial(num) {
+      var flag = true;
+      for (var i=2;i<num;i++) {
+          if (num % i == 0) {
+              flag = false;
+          }
+      }
+      if (flag) {
+          return true;
+      } else {
+          return false;
+      }
+  }
+  // 判断用户输入的偶数是否可分为两个质数之和：
+
+  function isTrue(a){
+      for(var i=2;i<a-2;i++){
+          var j = a -i;
+          if(factorial(i)&&factorial(j)){
+              console.log(a+"可以拆分为两个质数"+ i+"与"+j+"的和");
+          }
+      }
+  }
+</script>
+</body>
+</html>

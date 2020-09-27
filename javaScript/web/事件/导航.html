@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div name="div1">
+
+        <p id="p1">第一个段落<span>第一句</span><span>第二句</span></p>
+    </div>
+
+    <input type="button" value="获取p1父节点的name属性" onclick="fun1()">
+    <input type="button" value="显示p1子节点的个数" onclick="fun2()">
+    <input type="button" value="获取p1第一个子节点的节点类型" onclick="fun3()">
+    <input type="button" value="获取p1最后一个子节点的节点类型" onclick="fun4()">
+
+
+</body>
+<script type="text/javascript">
+    var p1 = document.getElementById("p1");
+    function fun1() {
+        var value = p1.parentNode.getAttribute("name");
+        alert(value);
+    }
+
+    function fun2() {
+        var childs = p1.childNodes;
+        alert(childs.length);
+    }
+
+    function fun3() {
+
+    }
+
+    function fun4() {
+        alert(p1.lastChild.nodeType);
+    }
+</script>
+</html>

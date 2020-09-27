@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    for(var i=100;i<1000;i++){
+        var a=i%10;
+        var b=parseInt(i/10) % 10;
+        var c=parseInt(i/100);
+        if(i==a*a*a+b*b*b+c*c*c){ //判断i是否为水仙花数
+            document.write(i + "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>

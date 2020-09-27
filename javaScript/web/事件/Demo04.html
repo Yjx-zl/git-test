@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style type="text/css">
+    #div1 {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+    }
+</style>
+<body>
+<div id="div1" onclick="danji()" ondblclick="shuangji()"
+     onmousedown="sbax()" onmouseup="sbtq()" onmouseenter="hover()" onmouseleave="withdraw()"></div>
+
+</body>
+
+<script type="text/javascript">
+    function sbax() {
+        var div = document.getElementById("div1");
+        div.style.width = "400px";
+        div.style.height = "400px";
+        div.style.backgroundColor = "yellow";
+        div.innerHTML = "黄色";
+    }
+
+    function sbtq() {
+        var div = document.getElementById("div1");
+        div.style.width = "400px";
+        div.style.height = "400px";
+        div.style.backgroundColor = "blue";
+        div.innerHTML = "蓝色";
+    }
+
+    function hover() {
+        var div = document.getElementById("div1");
+        div.style.width = "400px";
+        div.style.height = "400px";
+        div.style.backgroundColor = "pink";
+        div.innerHTML = "粉色";
+    }
+
+    function withdraw() {
+        var div = document.getElementById("div1");
+        div.style.width = "400px";
+        div.style.height = "400px";
+        div.style.backgroundColor = "violet";
+        div.innerHTML = "紫色";
+    }
+
+
+    function danji() {
+        var div = document.getElementById("div1");
+        div.style.width = "400px";
+        div.style.height = "400px";
+        div.style.backgroundColor = "green";
+        div.innerHTML = "绿色";
+    }
+
+
+    function shuangji() {
+        var div = document.getElementById("div1");
+        div.style.width = "400px";
+        div.style.height = "400px";
+        div.style.backgroundColor = "orange";
+        div.innerHTML = "橙色";
+    }
+</script>
+</html>

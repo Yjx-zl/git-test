@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    .style1{
+        color: red;
+        font-size: 10px;
+    }
+
+    .style2{
+        color: deepskyblue;
+        font-size: 2em;
+    }
+</style>
+<body>
+
+<p id="p1">修改样式测试</p>
+<input type="button" value="样式一" onclick="style1()">
+<input type="button" value="样式二" onclick="style2()">
+</body>
+
+<script type="text/javascript">
+    var p1 = document.getElementById("p1");
+
+    function style1() {
+        p1.className = "style1";
+    }
+
+    function style2() {
+        p1.className = "style2";
+    }
+
+</script>
+</html>

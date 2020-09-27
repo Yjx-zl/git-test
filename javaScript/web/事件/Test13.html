@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除动态添加的奇数段落</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p"></p>
+    </div>
+
+    <button type="button" id="btn" onclick="add()">添加段落</button>
+    <input type="button" id="btn2" value="删除段落" onclick="del()">
+</body>
+
+
+<script type="text/javascript">
+    var p;
+    var index = 1;
+    function add() {
+        p = document.createElement("p");//创建一个文本节点
+        var content = "第"+index+"段落";
+        var txt = document.createTextNode(content);
+        //将文本节点添加到段落
+        p.appendChild(txt);
+        //将段落添加到div中
+        var div1 = document.getElementById("div1");
+        div1.appendChild(p);
+        index++;
+    }
+
+    function del() {
+       var div1 = document.getElementById("div1");
+       var paras = div1.getElementsByTagName("p");
+       for (var ) {
+
+       }
+
+    }
+</script>
+</html>

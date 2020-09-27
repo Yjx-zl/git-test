@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">第一段落</p>
+        <p id="p2">第二段落</p>
+        <p id="p3">第三段落</p>
+        <p id="p4">第四段落</p>
+    </div>
+    <button type="button" onclick="del()">删除第二段落</button>
+</body>
+
+<script type="text/javascript">
+    function del() {
+        //找到父节点
+        // var div1 = document.getElementById("div1");
+        //找到子节点
+        var p2 = document.getElementById("p2");
+        //删除子节点
+        // div1.removeChild(p2);
+
+        //不知道父节点的情况下删除
+        p2.parentNode.removeChild(p2);
+    }
+</script>
+</html>

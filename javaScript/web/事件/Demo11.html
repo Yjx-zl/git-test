@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1"></div>
+<input type="button" value="添加输入框" onclick="add()">
+
+</body>
+
+<script type="text/javascript">
+    var index = 1;
+    function add() {
+        //创建一个段落标签
+        var p = document.createElement("input");
+        //创建一个文本节点
+        var content = "第"+index+"输入框";
+        var txt = document.createTextNode(content);
+        //将文本节点添加到段落
+        p.appendChild(txt);
+        //将段落添加到div中
+        var div1 = document.getElementById("div1");
+        div1.appendChild(p);
+        index++;
+    }
+
+</script>
+</html>
