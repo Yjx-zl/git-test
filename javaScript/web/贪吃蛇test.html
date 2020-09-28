@@ -12,17 +12,20 @@
         #map{
             width: 600px;
             height: 600px;
-            background: #8589a0;
+            border: 1px red solid;
+            background: #a0baff;
             position: absolute;
+            align-content: center;
             left: 10px;
             top: 60px;
-            overflow: hidden;
+            overflow: hidden;  /*该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位*/
         }
 
         input {
             padding: 10px; /*设置按钮所有内边距*/
             background: black; /*开始游戏背景颜色*/
             color: #ffffff; /*开始游戏字体颜色*/
+
         }
     </style>
 </head>
@@ -171,6 +174,7 @@
         //计算得分
         var score = document.getElementById("score");
         score.innerHTML = (snakes.length-3)*10;
+
 
         var x = parseInt(snakes[0].style.left); //snakes[0]代表蛇头
         var y = parseInt(snakes[0].style.top);
